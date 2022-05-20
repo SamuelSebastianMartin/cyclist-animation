@@ -13,13 +13,15 @@ let frameX = 0;
 let gameFrame = 0;
 const staggerFrame = 9;
 let streetOffset = 0;
+let speed = 3;
 
 function animate(){
 
   // Move streetImage
-  streetOffset ++;
+  streetOffset += speed;
   ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
   ctx.drawImage(streetImage, streetOffset, 0, 256, 256, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+  ctx.drawImage(streetImage, streetOffset - 2048, 0, 256, 256, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
   if (streetOffset > 2015) streetOffset = 0;
 
   // Animate cyclist
