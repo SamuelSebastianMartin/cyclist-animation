@@ -13,7 +13,7 @@ let frameX = 0;
 let gameFrame = 0;
 const staggerFrame = 9;
 let streetOffset = 0;
-let speed = 3;
+let speed = 6;
 
 function animate(){
 
